@@ -1,18 +1,25 @@
-mod temperature;
+mod christmas;
 mod fibonacci;
+mod temperature;
 
 use std::io;
 
 fn main() {
     let mut selection = String::new();
 
-    println!("Choose your program (temperature, fibonacci).");
-    io::stdin().read_line(&mut selection).expect("Invalid input");
+    println!("Choose your program (temperature, fibonacci, christmas).");
+    io::stdin()
+        .read_line(&mut selection)
+        .expect("Invalid input");
 
-    if selection.trim() == "temperature" {
+    let selection = selection.trim();
+
+    if selection == "temperature" {
         temperature::temperature(); // Temperature program
-    } else if selection.trim() == "fibonacci" {
+    } else if selection == "fibonacci" {
         fibonacci::fibonacci(); // Fibonacci program
+    } else if selection == "christmas" {
+        christmas::christmas(); // Christmas program
     } else {
         println!("Invalid selection");
     }
