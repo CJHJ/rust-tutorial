@@ -1,0 +1,21 @@
+[package]
+name = "ownership"
+version = "0.1.0"
+authors = ["CJHJ <corronade@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[[bin]]
+name = "dangling_ref"
+path = "src/dangling_ref.rs"
+
+[[bin]]
+name = "slice"
+path = "src/slice.rs"
